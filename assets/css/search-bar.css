@@ -1,0 +1,767 @@
+form.search-bar {
+    width: 100%;
+    padding: 0 40px;
+}
+
+form.search-bar * {
+    transition-duration: 0.15s;
+}
+
+form.search-bar .categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2px;
+}
+
+
+form.search-bar .drop-down-parent.choosen input {
+    box-shadow: inset 0 0 12px #000000;
+}
+
+form.search-bar .drop-down-parent {
+    margin-left: 2px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+form.search-bar .drop-down-parent input {
+    margin: 0;
+    border: none;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 12px;
+}
+
+form.search-bar .categories .drop-down-parent.active .drop-down-container {
+    display: flex;
+}
+
+form.search-bar .filter-container.active .drop-down-container {
+    display: flex;
+}
+
+.drop-down-container {
+    box-shadow: 0 0 20px #000000;
+    background-color: #dedede;
+    position: fixed;
+    z-index: 10000000;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 25%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+form.search-bar .drop-down-container .r-s,
+form.search-bar .drop-down-container .r-s {
+    display: flex;
+    align-items: center;
+}
+
+form.search-bar .drop-down-container input[type=color] {
+    padding: 0;
+    width: 24px;
+    height: 28px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+form.search-bar .drop-down-container input[type=number] {
+    padding: 8px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+form.search-bar .drop-down-container input.font-size {
+    padding: 8px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+form.search-bar .drop-down-container input.order {
+    width: 100px;
+}
+
+form.search-bar input[type=submit] {
+    border: none;
+    text-align: center;
+    border-radius: 0;
+    background-color: #22f862;
+    height: 35px;
+    margin-top: 12px;
+    border-radius: 12px;
+}
+
+form.search-bar .drop-down-container a.deleteBtn {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-image: url("../icons/delete.png");
+    background-color: #ff4444;
+    background-size: contain;
+    border-radius: 5px;
+}
+
+form.search-bar .drop-down-container a.hide-show.hide {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-image: url("../icons/hide.png");
+    background-color: #aa7700;
+    background-size: 80%;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+form.search-bar .drop-down-container a.hide-show.show {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-image: url("../icons/show.png");
+    background-color: #aa7700;
+    background-size: 80%;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+form.search-bar .drop-down-container a.hide-show.search-off {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-image: url("../icons/search_off.png");
+    background-color: #aa7700;
+    background-size: 80%;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+form.search-bar .drop-down-container a.hide-show.search-off {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-image: url("../icons/search_off.png");
+    background-color: #aa7700;
+    background-size: 80%;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+form.search-bar .drop-down-container a.hide-show.details-off {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-image: url("../icons/details_off.png");
+    background-color: #aa7700;
+    background-size: 80%;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+form.search-bar .drop-down-container a.hide-show.details-on {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-image: url("../icons/details_on.png");
+    background-color: #aa7700;
+    background-size: 80%;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+form.search-bar .drop-down-container .r-s p.element-id {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 100px;
+    background-color: #232323;
+    color: #ffffff;
+    margin-right: 12px;
+}
+
+form.search-bar .categories .category {
+    display: none;
+}
+
+form.search-bar .categories .category.show {
+    display: block;
+}
+
+form.search-bar .categories .subsection {
+    display: none;
+}
+
+form.search-bar .categories .subsection.show {
+    display: block;
+}
+
+.filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.filters .filter-container {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    transition-duration: 0.15s;
+    width: 30%;
+}
+
+.filters .filter-container.show {
+    display: flex;
+}
+
+.filters .filter-container .text {
+    width: 100%;
+}
+
+.filters .filter-container .text input {
+    width: 100%;
+    padding: 4%;
+    border: 3px double var(--scheme-1);
+    border-radius: 12px 0;
+}
+
+.filters .filter-container.radio-checkbox {
+    width: 100%;
+}
+
+.filters .filter-container.radio-checkbox p.filter-name { 
+    margin-bottom: 16px;
+}
+.filters .filter-container.radio-checkbox .radio {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filters .filter-container.radio-checkbox .radio .checkbox-container {
+    margin-top: 16px;
+    width: 33%;
+    min-width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.filters .filter-container.radio-checkbox .radio .checkbox-container p.checkbox-name {
+    margin-left: 6px;
+    font-size: 85%;
+}
+
+.filters .filter-container.radio-checkbox .radio .checkbox-container input[type="text"] {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.filters .filter-container select {
+    width: 100%;
+    padding: 4%;
+    border: 3px double var(--scheme-1);
+    border-radius: 12px 0;
+}
+
+.filters .filter-container .number .inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filters .filter-container .number .inputs input {
+    padding: 4%;
+    border: 3px double var(--scheme-1);
+    border-radius: 12px 0;
+    width: 45%;
+}
+
+.filters .filter-container .filter-name {
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    text-align: center;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 130%;
+    margin-top: 24px
+}
+
+.filter-container .number .after {
+    border: 0;
+    padding: 0;
+    margin: 0 0 0 4px;
+}
+
+.filters .filter-container .number {
+    display: flex;
+    align-items: center;
+}
+
+.filters .filter-container .double-select .double-select-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filters .filter-container .double-select select {
+    width: 45%;
+}
+
+.addComponent {
+    width: 20%;
+}
+
+.addComponent h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.addComponent input[type=submit] {
+    width: 100%;
+}
+
+.one-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#show-hide-btn {
+    width: 32px;
+    height: 32px;
+    background-color: #232323;
+    background-image: url("../icons/show.png");
+    background-size: 80%;
+    border-radius: 50%;
+}
+
+#show-hide-btn.hide {
+    background-image: url("../icons/hide.png");
+}
+
+
+.tools-btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 8px 40px;
+}
+
+.hidden input {
+    box-shadow: inset 0 0 30px #ff0000;
+}
+
+.hidden .drop-down-container input {
+    box-shadow: inset 0 0 10px #ff0000;
+}
+
+.close-btn {
+    background-image: url('../icons/close.png');
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 16px !important;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    transition-duration: 0.15s;
+}
+
+div.search-bar {
+    width: 100%;
+    padding: 24px;
+}
+
+div.search-bar .categories {
+    display: flex;
+    align-items: center;
+}
+
+div.search-bar .categories button.category-btn {
+    transition-duration: 0.15s;
+    width: 0%;
+    padding: 12px 0;
+    font-size: 100%;
+    margin: 2px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0;
+}
+
+div.search-bar .categories button.category-btn p {
+    width: 100%;
+    text-align: center;
+}
+
+div.search-bar .categories button.category-btn.show {
+    margin: 2px;
+    width: 100%;
+    padding: 12px 12px;
+}
+
+div.search-bar .categories button.category-btn.choosen {
+    margin: 2px;
+    width: 100%;
+    padding: 12px 12px;
+    box-shadow: inset 0 0 15px #000000;
+}
+
+
+div.search-bar .filters .checkbox-container label.label-container {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+
+div.search-bar .filters .checkbox-container div.checkbox,
+div.search-bar .filters .checkbox-container label.checkbox {
+    background-color: var(--scheme-1);
+    font-size: 100%;
+    color: var(--scheme-header);
+    border-radius: 12px;
+    text-shadow: 0 0 3px #000000;
+    border-bottom: 0px solid var(--bgimg-light);
+    border-top: 6px solid var(--bgimg-light);
+    transition-duration: 0.15s;
+    height: 32px;
+}
+
+
+div.search-bar .filters .checkbox-container label.label-container:hover div.checkbox,
+div.search-bar .filters .checkbox-container label.label-container:hover label.checkbox {
+    border-bottom: 6px solid var(--scheme-2);
+    border-top: 0px solid var(--bgimg-light);
+}
+
+div.search-bar .filter-container .number-name {
+    width: 100%;
+}
+
+div.search-bar .filters .filter-container p.filter-name {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+div.search-bar .filters .inputs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+div.search-bar .filters div.checkbox,
+div.search-bar .filters label.checkbox {
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+div.search-bar .filters .inputs input,
+div.search-bar .filters .inputs select {
+    width: 45%;
+}
+
+div.search-bar .filters input,
+div.search-bar .filters select {
+    border: 3px double var(--scheme-1);
+    border-radius: 12px 0;
+    padding: 4%;
+}
+
+div.search-bar .filters .text-filter {
+    width: 100%;
+}
+
+div.search-bar .filters input {
+    width: 100%;
+}
+
+div.search-bar button.search {
+    background-color: #00aadd;
+    font-size: 110%;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    float: right;
+    margin-top: 16px;
+}
+
+form.add-post-bar {
+    width: 100%;
+    padding: 24px;
+}
+
+form.add-post-bar .categories {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+form.add-post-bar .categories label.category-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition-duration: 0.15s;
+    width: 0%;
+    padding: 12px 0;
+    font-size: 100% !important;
+    margin: 2px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0;
+}
+
+form.add-post-bar .categories label.category-btn p {
+    width: 100%;
+    text-align: center;
+}
+
+form.add-post-bar .categories label.category-btn.show {
+    margin: 2px;
+    width: 100%;
+    padding: 12px 12px;
+}
+
+form.add-post-bar .categories label.category-btn.choosen {
+    margin: 2px;
+    width: 100%;
+    padding: 12px 12px;
+    box-shadow: inset 0 0 15px #000000;
+}
+
+form.add-post-bar .categories button.section-row-btn.choosen {
+    box-shadow: none;
+}
+
+form.add-post-bar .filters .checkbox-container label.label-container {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+
+form.add-post-bar .checkbox-container div.checkbox,
+form.add-post-bar .checkbox-container label.checkbox {
+    background-color: var(--scheme-1);
+    font-size: 100%;
+    color: var(--scheme-header);
+    border-radius: 12px;
+    text-shadow: 0 0 3px #000000;
+    border-bottom: 0px solid var(--bgimg-light);
+    border-top: 6px solid var(--bgimg-light);
+    transition-duration: 0.15s;
+    height: 32px;
+}
+
+
+form.add-post-bar .checkbox-container label.label-container:hover div.checkbox,
+form.add-post-bar .checkbox-container label.label-container:hover label.checkbox {
+    border-bottom: 6px solid var(--scheme-2);
+    border-top: 0px solid var(--bgimg-light);
+}
+
+form.add-post-bar .filter-container .number-name {
+    width: 100%;
+}
+
+form.add-post-bar .filters .filter-container p.filter-name {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+form.add-post-bar .filters .inputs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+form.add-post-bar .filters div.checkbox,
+form.add-post-bar .filters label.checkbox {
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+form.add-post-bar .filters .inputs input,
+form.add-post-bar .filters .inputs select {
+    width: 45%;
+}
+
+form.add-post-bar .filters input,
+form.add-post-bar .filters select {
+    border: 2px solid var(--scheme-1);
+    border-radius: 12px;
+    padding: 4%;
+}
+
+form.add-post-bar .filters .text-filter {
+    width: 100%;
+}
+
+form.add-post-bar .filters input {
+    width: 100%;
+}
+
+form.add-post-bar button.search {
+    background-color: #00aadd;
+    font-size: 110%;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    float: right;
+    margin-top: 16px;
+}
+
+
+#show-more-btn {
+    cursor: pointer;
+    margin-top: 16px;
+    background-image: linear-gradient(0deg, transparent 47%, var(--scheme-1) 47%, var(--scheme-1) 53%, transparent 53%);
+}
+
+#show-more-btn p {
+    border: 4px double var(--scheme-1);
+    border-width: 0 4px;
+    border-radius: 12px;
+    width: max-content;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: #ffffff;
+    color: var(--scheme-1);
+    font-weight: bolder;
+}
+
+
+.hidden_details {
+    overflow: hidden;
+    height: 0;
+}
+
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 95%;
+    padding: 16px;
+    margin-top: 16px;
+    border: 3px double var(--scheme-1);
+    border-radius: 20px 0 20px 0;
+}
+
+
+.label_file {
+    width: 100%;
+    cursor: pointer;
+    padding: 16px;
+    margin-top: 12px;
+    color: var(--scheme-1);
+    font-weight: bolder;
+    border: 3px double var(--scheme-1);
+    border-radius: 20px 0 20px 0;
+    text-align: center;
+}
+
+.label_file:hover {
+    background-color: #00111d22;
+}
+
+.label_file input[type=file] {
+    display: none;
+}
+
+.description-title {
+    font-size: 100%;
+    font-weight: bolder;
+    margin-top: 24px;
+    padding: 10px;
+}
+
+.images_cont {
+    display: flex;
+    margin-top: 12px;
+    border: 3px double var(--scheme-1);
+    border-radius: 20px 0 20px 0;
+    max-width: 100%;
+}
+
+#images_cont {
+    max-height: 300px;
+}
+
+
+.images_cont .min-width {
+    width: calc(100% - 300px);
+    height: 300px;
+    overflow-x: auto;
+}
+
+#images_cont img {
+    border: 3px double var(--scheme-1);
+    border-radius: 20px 0 20px 0;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    float: left;
+    margin: 5px;
+}
+
+#main_image_cont {
+    width: 300px;
+    height: 300px;
+    border: 3px double var(--scheme-1);
+    border-radius: 20px 0 20px 0;
+    overflow: hidden;
+}
+
+#main_image_cont img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+form.add-post-bar .phone-checkboxes label {}
+
+form.add-post-bar .phone-checkboxes label {
+    display: flex;
+}
+
+form.add-post-bar .phone-checkboxes label input[type=checkbox]::before {
+    transform: none;
+    margin-left: -30px;
+    padding: 3px;
+    background-color: var(--scheme-1);
+    background-size: 80%;
+    background-position: center;
+}

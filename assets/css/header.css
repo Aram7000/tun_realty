@@ -1,0 +1,171 @@
+
+header * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition-duration: 0.15s;
+    color: var(--scheme-1);
+}
+
+header {
+    z-index: 1000;
+    box-shadow: 0 0 5px #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+    background-color: var(--scheme-header);
+}
+
+header .l-s,
+header .r-s {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header a.tun-realty-logo {
+    height: 100%;
+    margin-left: 20px;
+}
+
+header a.tun-realty-logo img {
+    height: 100%;
+}
+
+header button.menu-btn {
+    width: calc(var(--header-height) - 48px);
+    height: calc(var(--header-height) - 52px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+header button.menu-btn span {
+    display: block;
+    height: 20%;
+    width: 100%;
+    background-color: var(--scheme-1);
+    border-radius: 20px;
+    transform-origin: center center;
+}
+
+header button.menu-btn.opened span {
+    animation: menu-button 1s forwards;
+}
+
+header select#language {
+    font-size: 100%;
+    background-color: transparent;
+    padding: 4px 16px;
+    color: var(--scheme-1);
+}
+
+header .r-s .acc-btn {
+    padding: 6px 12px;
+    margin-right: 8px;
+    border-radius: 10px;
+    border-width: 0 3px;
+    border-style: double;
+    border-color: transparent var(--scheme-1);
+    color: var(--scheme-1);
+}
+
+header .r-s .acc-btn:hover {
+    border-style: solid;
+    box-shadow: 0 0 5px #000000;
+}
+
+main {
+    margin-top: var(--header-height);
+}
+
+.scheme {
+    background-color: transparent;
+    margin-left: 12px;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-image: url('../icons/moon_light.png');
+}
+
+body.dark .scheme {
+    background-image: url('../icons/moon_dark.png');
+}
+
+menu {
+    z-index: 1000;
+    position: fixed;
+    left: -400px;
+    top: 0;
+    height: 100%;
+    width: 350px;
+    box-shadow: 0 0 10px #000000;
+    background-color: var(--scheme-header);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition-duration: 0.15s;
+    padding-top: var(--header-height);
+}
+
+menu .top, menu .bottom {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    margin: 12px 0;
+}
+
+menu a {
+    width: 92%;
+    color: var(--scheme-1);
+    padding: 12px;
+    display: block;
+    transition-duration: 0.15s;
+}
+menu a:hover {
+    background-color: var(--scheme-2);
+    border-radius: 12px;
+}
+
+menu.opened {
+    left: 0px;
+}
+
+menu span.note {
+    padding: 2px 6px 3px 5px;
+    font-size: 70%;
+    border-radius: 20px;
+    background-color: #ff3333;
+    color: #ffffff;
+}
+
+
+@keyframes menu-button {
+    0% {
+        transform: rotateX(0deg) rotateZ(0deg);
+        overflow: hidden;
+        height: 20%;
+        width: 100%;
+    }
+
+    50% {
+        width: 0%;
+        height: 0%;
+        transform: rotateX(180deg) rotateZ(180deg);
+    }
+
+    100% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        overflow: hidden;
+        height: 20%;
+        width: 100%;
+    }
+}

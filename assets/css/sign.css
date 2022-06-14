@@ -1,0 +1,32 @@
+.reg_form,
+.log_form {
+   display: flex;
+   flex-direction: column;
+   width: 19%;
+}
+ 
+.reg_form input,
+.log_form input {
+   border: none;
+   border: 2px solid blue;
+   border-radius: 0.5rem;
+   padding: 3% 7%;
+   text-align: center;
+   margin-top: 5%;
+   font-size: 19px;
+}
+ 
+.reg_button {
+   text-align: center;
+   margin-top: 5%;
+   font-size: 19px;
+   padding: 3% 7%;
+   border-radius: 0.5rem;
+   border: 2px solid blue;
+   color: black;
+}
+ 
+.form_block {
+   display: flex;
+   flex-direction: column;
+}

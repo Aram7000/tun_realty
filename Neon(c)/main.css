@@ -1,0 +1,78 @@
+body {
+    --apple: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --trebuchet: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div#N_Footer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-width: max-content;
+}
+
+p#N_Footer_T {
+    font-family: var(--trebuchet);
+    padding-bottom: 2px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+}
+
+div#N_Footer.dark p#N_Footer_T {
+    color: #cccccc;
+}
+
+span#N_Footer_IMG {
+    background-image: url("./Logo/512_light.png");
+    background-size: cover;
+    margin-left: 10px;
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+div#N_Footer.dark span#N_Footer_IMG {
+    background-image: url("./Logo/512_dark.png");
+}
+
+div#N_Footer.light span#N_Footer_IMG {
+    background-image: url("./Logo/512_light.png");
+}
+
+#NEON_loading {
+    background-color: #090909;
+    position: fixed;
+    z-index: 10000;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+}
+
+.NEON_loading-i {
+    position: fixed;
+    z-index: 10001;
+    height: 30px;
+    width: 30px;
+    left: 50%;
+    top: 50%;
+}
+
+@keyframes NEON_LOADING_ANIMATION {
+    0% {
+        transform: rotate(270deg);
+    }
+    20% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(270deg)
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}

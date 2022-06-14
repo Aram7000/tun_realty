@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ipoteka(price, pay, percent, years) {
+            var i = parseFloat(percent / 100 / 12);
+            var n = parseFloat(years * 12);
+            var r = (price - pay) * ((i * Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1));
+            return r.toFixed(2);
+        }
+
+        var price = 1790000,
+            pay = price * 30 / 100,
+            percent = 12,
+            years = 15;
+
+        console.log("Общая сумма кредита: " + price + " руб");
+        console.log("Первый платеж: " + pay + " руб");
+        console.log("Ставка: " + percent + " %");
+        console.log("Срок кредита: " + years + " лет");
+        console.log("Ежемесячный платеж: " + ipoteka(price, pay, percent, years) + " руб");
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .block {
+            margin: 50px;
+            width: 250px;
+            height: 400px;
+            position: relative;
+            cursor: pointer;
+            border-radius: 0 20px;
+            overflow: hidden;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+            box-shadow: inset 0 0 20px #000000;
+            opacity: 1;
+            transition-duration: 0.15s;
+            left: 0;
+            top: 0;
+            padding: 20px;
+        }
+
+        .overlay p {
+            color: #ffffff;
+            background-color: #1c6c82;
+            border-radius: 12px 0;
+            border: 3px double #ffffff;
+            padding: 8px;
+        }
+
+        .block:hover .overlay {
+            opacity: 0;
+        }
+
+        .img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+
+<body>
+
+    <div class="block">
+        <div class="img">
+            <img src="img.jpg">
+        </div>
+        <div class="overlay">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, mollitia tenetur praesentium ipsum est
+                quidem a voluptatibus rerum accusamus nesciunt quaerat minima voluptatum iure cupiditate dignissimos cum
+                soluta quo placeat!</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<a class="post_block" href="single.php?post=<?php echo $post[0] ?>">
+    <div class="t-s">
+        <img class="post-main" src="<?php echo $post[3][1][0] ?>" alt="">
+        <div class="info1">
+            <p>
+                Վաճառք
+            </p>
+            <p>
+                DS-8476
+            </p>
+        </div>
+    </div>
+    <div class="b-s">
+        <div class="address">
+            <span class="icon location-icon"></span>
+            <div class="info2">
+                <p>Արաբկիր</p>
+                <p>Կոմիտաս Պող․ </p>
+            </div>
+        </div>
+        <div class="price">
+            <div class="l-s">
+                <p class="price-now">37000</p>
+                <sup>$ USD</sup>
+            </div>
+            <div class="r-s">
+                <p class="old-price-title">Հին Գին</p>
+                <p class="old-price">
+                    50000
+                </p>
+            </div>
+        </div>
+        <div class="info3">
+            <div class="filter">
+                <p class="title">
+                    Սենյակ
+                </p>
+                <span class="icon room-icon"></span>
+                <p>
+                    3
+                </p>
+            </div>
+            <div class="filter">
+                <p class="title">
+                    Մակերես
+                </p>
+                <span class="icon surface-icon"></span>
+                <p>
+                    68
+                </p>
+            </div>
+            <div class="filter">
+                <p class="title">
+                    Հարկ
+                </p>
+                <span class="icon floor-icon"></span>
+                <p>
+                    13 / 16
+                </p>
+            </div>
+        </div>
+        <div class="visitors_count">
+            <span class="icon eye-icon"></span>
+            <p>
+                48000
+            </p>
+        </div>
+    </div>
+</a>

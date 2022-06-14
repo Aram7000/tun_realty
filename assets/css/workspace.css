@@ -1,0 +1,280 @@
+table td {
+    border: 3px solid #acacac;
+    padding: 4px 16px;
+    white-space: nowrap;
+}
+
+table {
+    overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* max-width: 500px; */
+}
+
+form input {
+    padding: 8px 16px;
+    font-size: 100%;
+    margin-top: 4px;
+    border-radius: 8px;
+    border-width: 0 3px;
+    border-style: solid;
+    border-color: #0099ff;
+    width: 100%;
+}
+
+form input[type="submit"] {
+    border: none;
+    background-color: #0099ff;
+    color: #ffffff;
+    align-self: flex-end;
+    width: unset;
+    margin-top: 16px;
+}
+
+h2 {
+    margin: 64px 0 32px 0;
+}
+
+
+div.filter_type_options {
+    display: none;
+    opacity: 0;
+    transition-duration: 0.2s;
+    width: 100%;
+}
+
+div.filter_type_options.show {
+    display: flex;
+    opacity: 1;
+}
+
+footer {
+    height: 200px;
+    background-color: #005599;
+}
+
+main {
+    padding-bottom: 200px;
+}
+
+div.filter_type_options input {
+    width: 100%;
+}
+
+form select {
+    padding: 8px 16px;
+    font-size: 100%;
+    margin-top: 4px;
+    border-radius: 8px;
+    border-width: 0 3px;
+    border-style: solid;
+    border-color: #0099ff;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+}
+
+form select option {
+    text-align: left;
+}
+
+form.phone-num {
+    width: 100%;
+    padding-top: 56px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+form.phone-num p {
+    padding: 8px 12px;
+}
+
+
+form.phone-num .row-phone {
+    border-width: 0 4px 0 4px;
+    border-style: double;
+    border-color: var(--scheme-1);
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    width: 70%;
+    margin: 0 auto;
+    height: 35px;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+form.phone-num .row {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    height: 100%;
+}
+
+form.phone-num .small-info {
+    color: #787878;
+    font-size: 80%;
+}
+
+form.phone-num .drop-down-parent-more {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+form.phone-num .drop-down-parent-more .drop-down-button-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 55%;
+}
+
+form.phone-num .drop-down-parent-more .drop-down-button-more .dot {
+    transition-duration: 0.4s;
+    display: block;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #454545;
+    transform-origin: center;
+}
+
+form.phone-num .drop-down-parent-more .drop-down-container-more {
+    position: absolute;
+    top: 100%;
+    transition-duration: 0.4s;
+    right: 0;
+    min-width: max-content;
+    transform: scale(0);
+    background-color: transparent;
+    box-shadow: 0px 12px 8px #00000088;
+    backdrop-filter: blur(20px);
+    padding: 12px;
+    border: 3px double var(--scheme-1);
+    border-radius: 16px 0 16px 0;
+    z-index: 1000;
+}
+form.phone-num .drop-down-parent-more:hover .drop-down-container-more {
+    transform: scale(1);
+}
+
+form.phone-num .drop-down-parent-more .drop-down-container-more a {
+    display: flex;
+    align-items: center;
+    color: var(--scheme-3);
+    text-shadow: 0 0 5px var(--scheme-5);
+    border-left: 3px double transparent;
+    transition-duration: 0.15s;
+    border-radius: 0;
+}
+form.phone-num .drop-down-parent-more .drop-down-container-more a:hover {
+    border-left: 3px double var(--scheme-1);
+    border-radius: 10px;
+}
+form.phone-num .drop-down-parent-more:hover .drop-down-button-more .dot {
+    background-color: #acacac;
+    border-radius: 0;
+    height: 7px;
+}
+
+form.phone-num input[type=tel] {
+    color: var(--scheme-6);
+    border: none;
+    border-radius: 0 16px 0 16px;
+    transition-duration: 0.15s;
+    background-color: transparent;
+    margin: 0;
+}
+
+form.phone-num label {
+    position: relative;
+    margin-left: 15%;
+    width: 40%;
+    margin-top: 36px;
+    border: 3px double var(--scheme-1);
+    border-radius: 0 16px 0 16px;
+}
+
+form.phone-num label input[type=tel]:focus {
+    box-shadow: inset 0 -5px 5px #00112255;
+}
+
+form.phone-num select {
+    border: none;
+    border-radius: 100px;
+    padding: 8px 8px;
+    width: calc(100% - 20px);
+}
+
+form.phone-num label p {
+    padding: 4px 12px;
+    transform: translateY(-100%);
+    z-index: 50;
+    left: 12px;
+    position: absolute;
+    background-color: var(--bgimg);
+    font-size: 80%;
+    color: var(--scheme-1);
+    border-width: 1px 1px 0 1px;
+    border-color: var(--scheme-1);
+    border-radius: 10px 0 0 0;
+}
+
+form.phone-num label .icon {
+    margin-left: 0;
+}
+
+.row-add-num {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+form.phone-num input[type=submit] {
+    margin-left: 12px;
+    width: 112px;
+    text-align: center;
+}
+
+
+.large {
+    width: 35px !important;
+    height: 35px !important;
+    margin-top: 16px;
+}
+
+form.phone-num .drop-down-parent-more.info {
+    width: 70%;
+    margin: 0 auto;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+form.phone-num .drop-down-parent-more.info .drop-down-button-more span.icon {
+    margin: 0;
+}
+form.phone-num .drop-down-parent-more.info .drop-down-container-more {
+    left: 0;
+    border-radius: 0 12px;
+}
+
+form.phone-num .drop-down-parent-more.info .drop-down-container-more p {
+    width: 60vw;
+}
+

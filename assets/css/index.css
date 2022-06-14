@@ -1,0 +1,378 @@
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #cdcdcd;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1c6c82;
+    border: 2px solid #cdcdcd;
+    border-radius: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    --max-width: 800px;
+    --header-height: 80px;
+    --scheme-header: #ffffff;
+    --scheme-1: #1c6c82;
+    --scheme-2: #cdcdcd;
+    --scheme-3: #003366;
+    --scheme-4: #cdcdcd;
+    --scheme-5: #ffffff;
+    --scheme-6: #000000;
+    --scheme-8: #efefef;
+    --scheme-9: #1c6c82;
+    --scheme-10: #ffffff;
+    --bgimg: #ffffff;
+    --scheme-7: #0066ff;
+    background-attachment: fixed;
+    background: var(--bgimg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+body.dark {
+    color: #ffffff;
+    --scheme-header: #1c6c82;
+    --scheme-1: #dedede;
+    --scheme-2: #0c5c72;
+    --scheme-3: #ffffff;
+    --scheme-4: #343434;
+    --scheme-5: #000000;
+    --scheme-6: #ffffff;
+    --scheme-8: #171717;
+    --scheme-9: #000000;
+    --scheme-10: #343434;
+    --bgimg: #232323;
+}
+
+.max-width {
+    margin: var(--header-height) auto;
+    max-width: var(--max-width);
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+}
+
+main {
+    min-height: 100vh;
+}
+
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    margin: 0 !important;
+    padding: 0;
+    border: none;
+    transition-duration: 0.15s;
+}
+
+
+
+input[type="checkbox"]::before {
+    transition-duration: 0.15s;
+    content: "";
+    transform: translateY(-50%);
+    display: block;
+    width: 16px;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 16px;
+    background-color: #ffffff;
+    background-image: none;
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input[type="checkbox"]:checked::before {
+    background-image: url('../icons/check.png');
+    transition-duration: 0.15s;
+}
+
+input[type="radio"] {
+    width: 0;
+    height: 0;
+    margin: 0 !important;
+    padding: 0;
+    border: none;
+    transition-duration: 0.15s;
+}
+
+
+
+input[type="radio"]::before {
+    transition-duration: 0.15s;
+    content: "";
+    transform: translateY(-50%);
+    display: block;
+    width: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 16px;
+    background-color: #ffffff;
+    background-image: none;
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input[type="radio"]:checked::before {
+    background-image: radial-gradient(#ffffff, #0c5c72 45%, #ffffff 55%);
+    transition-duration: 0.15s;
+    background-color: #0c5c72;
+}
+
+
+
+span.icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+span.icon.phone-icon {
+    background-image: url('../icons/phone.png');
+    background-color: #1c6c82;
+    border-radius: 50%;
+    background-size: 80%;
+    background-position: center;
+    margin-left: 8px;
+}
+
+span.icon.info-icon {
+    background-image: url('../icons/info.png');
+    border-radius: 50%;
+    background-size: 100%;
+    background-position: center;
+    margin-left: 8px;
+}
+
+span.icon.remove-icon {
+    background-image: url('../icons/delete.png');
+    background-color: #1c6c82;
+    border-radius: 50%;
+    background-size: 80%;
+    background-position: center;
+    margin-left: 8px;
+}
+
+span.icon.remove-phone-icon {
+    background-image: url('../icons/remove-phone.png');
+    background-color: #ff5555;
+    border-radius: 50%;
+    background-size: 80%;
+    background-position: center;
+    margin-left: 8px;
+}
+
+span.icon.delete-icon {
+    background-image: url('../icons/delete.png');
+    background-color: #ff5555;
+    border-radius: 50%;
+    background-size: 70%;
+    background-position: center;
+    margin-left: 8px;
+}
+
+span.icon.whatsapp-filled-icon {
+    background-image: url('../icons/whatsapp.png');
+    border-radius: 50%;
+    background-size: 100%;
+    background-position: center;
+    margin-left: 8px;
+}
+
+span.icon.viber-filled-icon {
+    background-image: url('../icons/viber.png');
+    border-radius: 50%;
+    background-size: 100%;
+    background-position: center;
+    margin-left: 8px;
+}
+
+span.icon.whatsapp-icon {
+    background-image: url('../icons/whatsapp_d.png');
+    border-radius: 8px 0;
+    padding: 8px;
+    background-size: 100%;
+    background-position: center;
+    margin-left: 8px;
+    border: 3px double #ff5555;
+}
+
+span.icon.viber-icon {
+    background-image: url('../icons/viber_d.png');
+    border-radius: 8px 0;
+    padding: 8px;
+    background-size: 100%;
+    background-position: center;
+    margin-left: 8px;
+    border: 3px double #ff5555;
+}
+
+span.icon.location-icon {
+    background-image: url('../icons/location.png');
+    border-radius: 8px 0;
+    padding: 8px;
+    background-size: 100%;
+    background-position: center;
+}
+
+span.icon.room-icon {
+    background-image: url('../icons/room.png');
+    width: 30px;
+    height: 30px;
+    border-radius: 8px 0;
+    padding: 8px;
+    background-size: 100%;
+    background-position: center;
+}
+
+span.icon.floor-icon {
+    background-image: url('../icons/floor.png');
+    width: 30px;
+    height: 30px;
+    border-radius: 8px 0;
+    padding: 8px;
+    background-size: 100%;
+    background-position: center;
+}
+
+span.icon.surface-icon {
+    background-image: url('../icons/surface.png');
+    width: 30px;
+    height: 30px;
+    border-radius: 8px 0;
+    padding: 8px;
+    background-size: 100%;
+    background-position: center;
+}
+
+span.icon.eye-icon {
+    background-image: url('../icons/eye.png');
+    width: 20px;
+    height: 20px;
+    border-radius: 8px 0;
+    padding: 8px;
+    background-size: 100%;
+    background-position: center;
+}
+
+span.icon.heart-icon {
+    background-image: url('../icons/heart.png');
+    width: 20px;
+    height: 20px;
+    border-radius: 8px 0;
+    padding: 8px;
+    background-size: 100%;
+    background-position: center;
+}
+
+span.icon.arrow-left-icon {
+    background-image: url('../icons/arrow_left.png');
+    width: 40px;
+    height: 40px;
+    border-radius: 8px 0;
+    padding: 8px;
+    background-size: 100%;
+    background-position: center;
+}
+
+span.icon.arrow-right-icon {
+    background-image: url('../icons/arrow_right.png');
+    width: 40px;
+    height: 40px;
+    border-radius: 8px 0;
+    padding: 8px;
+    background-size: 100%;
+    background-position: center;
+}
+
+span.icon.heart-active {
+    background-image: url('../icons/heart_filled.png');
+}
+
+span.icon.icon-large {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+
+.no-padding {
+    padding: 0 !important;
+}
+
+#loading-screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #dedede;
+    z-index: 20000;
+}
+
+#loading-screen.loadend {
+    animation: loadend 2s forwards;
+}
+
+#loading-screen span.fr {
+    width: 200px;
+    height: 200px;
+    border: 6px double;
+    border-radius: 50%;
+    border-color: var(--scheme-1) transparent transparent transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: loading-fr 1s infinite;
+}
+
+
+@keyframes loadend {
+    0% {
+        opacity: 1;
+        display: block;
+        z-index: 20000;
+    }
+
+    99.9% {
+        opacity: 0;
+        display: block;
+        z-index: 20000;
+    }
+
+    100% {
+        z-index: -1;
+        opacity: 0;
+        display: none !important;
+    }
+}
+
+@keyframes loading-fr {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}

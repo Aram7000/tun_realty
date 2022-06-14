@@ -1,0 +1,188 @@
+
+.posts {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+}
+
+.posts .post {
+   width: 270px;
+   max-width: 800px;
+   margin: 0 12px;
+   position: relative;
+   padding: 5vh 0;
+}
+
+
+.posts .post .visitors {
+   transform: translate(0%, -50%);
+   right: 15%;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   padding: 0px 12px;
+   position: absolute;
+   z-index: 100;
+   top: 5vh;
+   background-image: linear-gradient(var(--bgimg) 70%, transparent 70%);
+}
+
+.posts .post .container {
+   border: 3px double var(--scheme-1);
+   border-radius: 20px 0;
+   overflow: hidden;
+   position: relative;
+   padding: 8px;
+   background-color: var(--bgimg);
+}
+
+
+.posts .post img {
+   width: 33vw;
+   height: 20vw;
+   max-height: 200px;
+   object-fit: cover;
+   object-position: center;
+   border-radius: 20px 0;
+   box-shadow: 0 0 10px #000000;
+}
+
+.posts .post .infos {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 100%;
+   padding: 0 16px;
+}
+
+.posts .post .address {
+   padding: 0 12px;
+   color: var(--scheme-1);
+   font-size: 80%;
+}
+
+.posts .post .address p {
+   margin-bottom: 4px;
+}
+
+.posts .post .price_now {
+   color: var(--scheme-7);
+   font-size: 150%;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-weight: bold;
+   padding-right: 8px;
+}
+
+.posts .post sup {
+   font-weight: bolder;
+   color: var(--scheme-7);
+   margin-top: 4px;
+   min-width: max-content;
+}
+
+.posts .post .price {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   padding: 8px 0;
+}
+
+.posts .post .price-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-bottom: 4px;
+   max-width: max-content;
+}
+
+.posts .post .visitors p {
+   margin-right: 6px;
+}
+
+.posts .post .old_price {
+   padding: 0px 4px;
+   font-size: 90%;
+   background-image: linear-gradient(#ff3333 45%, #ffffff 45%, #ffffff 55%, #ff3333 55%);
+   border-radius: 20px;
+   border: solid #ff3333;
+   border-width: 4px 8px;
+   color: #ffffff;
+}
+
+.posts .post .title {
+   color: var(--scheme-6);
+   font-weight: bolder;
+   min-width: max-content;
+}
+
+
+.posts .post .title.small {
+   font-size: 70%;
+}
+.posts .post .price .title.small {
+   font-size: 70%;
+   margin-left: 12px;
+}
+
+.info3 .title {
+   padding: 0 !important;
+}
+
+.posts .post .info3 {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   padding: 8px 0;
+   color: var(--scheme-1);
+}
+
+.posts .post .container .t-s {
+   flex-direction: column;
+}
+
+.posts .post img {
+   width: 100%;
+   height: 40%;
+   box-shadow: 0 0 3px #000000;
+   margin-bottom: 12px;
+}
+
+#posts .post {
+   width: 225px;
+}
+
+#posts .post .infos {
+   padding: 0 6px;
+}
+
+.posts .post .container {
+   transition-duration: 0.5s;
+   box-shadow: 7px 7px 7px #00000077;
+}
+.posts .post .container:hover {
+   box-shadow: 7px 7px 7px #00000000;
+}
+
+button.heart {
+   position: absolute;
+   right: 12px;
+   top: 11px;
+   padding: 3px;
+   background-color: #ffffff66;
+   border-radius: 50%;
+}
+
+button.heart:hover {
+   background-color: #ffffff;
+}
+
+body.dark .visitors span {
+   filter: brightness(300%);
+}
+
+body.dark .info3 span {
+   filter: brightness(300%);
+}
+

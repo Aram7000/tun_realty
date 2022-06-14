@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .post-card {
+            border: 1px solid #003377;
+            width: 15vw;
+            height: 29vw;
+            box-shadow: 7px 7px 15px #00091199;
+            border-radius: 32px 0;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            padding: 2px;
+        }
+
+        .post-card:hover {
+            transform: scale(0.98);
+            box-shadow: none;
+        }
+
+        .container {
+            border-radius: 28px 0;
+            border: 1px solid #003377;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex-row {
+            padding: 50px 0;
+            width: 80vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .img {
+            width: 100%;
+            height: 50%;
+            background-image: url('../pic1.jpg');
+            display: block;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition-duration: 0.4s;
+        }
+        
+        .post-card:hover .img {
+            transform: rotateY(360deg) scale(1.2);
+            box-shadow: 0 0 5px #003377;
+        } */
+        * {
+            transition-duration: 6s;
+        }
+        p {
+            margin: 10px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            font-size: 100px;
+            top: 0;
+            left: 0;
+        }
+
+        div.parent {
+            position: absolute;
+            overflow: hidden;
+            height: 70px;
+        }
+
+        div.parent.rotated {
+            transform-origin: center center;
+            transform: rotateX(180deg);
+            margin-top: 70px;
+        }
+
+
+        .vm {
+            top: 200px;
+            margin-top: 70px;
+        }
+
+        .vm.rotated {
+            top: 130px;
+        }
+
+        .vm p {
+            margin-top: -60px;
+        }
+
+
+        #doit.active .rotated {
+            height: 0;
+        }
+
+        #doit.active .vm {
+            top: 26px;
+        }
+        
+        
+        #doit2.active .rotated {
+            height: 0;
+        }
+
+        #doit2.active .vm {
+            top: 26px;
+        }
+        
+
+        #doit2 .parent {
+            lefT: 500px;
+        }
+
+
+    </style>
+    
+</head>
+
+<body>
+    <!-- <div class="flex-row">
+        <div class="post-card">
+            <div class="container">
+                <span class="img"></span>
+            </div>
+        </div>
+        <div class="post-card">
+            <div class="container">
+                <span class="img"></span>
+            </div>
+        </div>
+        <div class="post-card">
+            <div class="container">
+                <span class="img"></span>
+            </div>
+        </div>
+        <div class="post-card">
+            <div class="container">
+                <span class="img"></span>
+            </div>
+        </div>
+        
+    </div> -->
+
+
+    <button id="doit">DO IT
+        <div class="parent vm">
+            <p>MINET ?</p>
+        </div>
+        <div class="parent rotated vm">
+            <p>MINET ?</p>
+        </div>
+        <div class="parent nm">
+            <p>MINET ?</p>
+        </div>
+        <div class="parent rotated nm">
+            <p>MINET ?</p>
+        </div>
+    </button>
+    <button id="doit2">DO IT
+        <div class="parent vm">
+            <p>ANAL?</p>
+        </div>
+        <div class="parent rotated vm">
+            <p>ANAL?</p>
+        </div>
+        <div class="parent nm">
+            <p>ANAL?</p>
+        </div>
+        <div class="parent rotated nm">
+            <p>ANAL?</p>
+        </div>
+    </button>
+    <script>
+        document.getElementById("doit").addEventListener("click", () => {
+            document.getElementById("doit").classList.add("active");
+        });
+        document.getElementById("doit2").addEventListener("click", () => {
+            document.getElementById("doit2").classList.add("active");
+        });
+    </script>
+</body>
+
+</html>
